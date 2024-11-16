@@ -1,1 +1,206 @@
-# Erino-SDE-Internship-Assignment
+# Contact Management System
+
+A full-stack web application built to manage contacts for businesses or individuals. This application provides an easy way to add, view, edit, and delete contact details, ensuring a clean and organized contact list.
+
+## Table of Contents
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Screenshots](#screenshots)
+7. [Database Schema](#database-schema)
+8. [API Endpoints](#api-endpoints)
+9. [Contributing](#contributing)
+10. [License](#license)
+
+## Overview
+
+The **Contact Management System** is a web-based solution for managing personal or business contacts. The app allows users to:
+- Add new contacts with detailed information.
+- View all contacts in a table with sorting and pagination features.
+- Edit contact details to keep them updated.
+- Delete contacts with a confirmation prompt to prevent accidental deletions.
+
+This system uses ReactJS for the frontend, Node.js for the backend, and MongoDB for the database.
+
+## Features
+- **CRUD Operations**: Users can create, read, update, and delete contacts.
+- **User-Friendly UI**: Built with Material-UI (MUI) for an interactive and modern UI.
+- **Sorting & Pagination**: Efficiently manage large contact lists.
+- **Confirmation for Deletion**: Double confirmation before deleting a contact to prevent mistakes.
+- **Responsive Design**: Works on both desktop and mobile screens.
+  
+## Technologies Used
+- **Frontend**: ReactJS, Material-UI (MUI), Axios
+- **Backend**: Node.js, Express
+- **Database**: MongoDB, Mongoose
+- **Other**: Git, GitHub for version control, Heroku (or another platform for deployment)
+
+## Installation
+
+### Prerequisites
+
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/en/) (for backend and frontend)
+- [MongoDB](https://www.mongodb.com/) (for the database, or use a cloud version like MongoDB Atlas)
+
+### Steps to Run Locally
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    cd your-repo-name
+    ```
+
+2. Install backend dependencies:
+    ```bash
+    cd contact-management-backend
+    npm install
+    ```
+
+3. Install frontend dependencies:
+    ```bash
+    cd ../contact-management-frontend
+    npm install
+    ```
+
+4. Configure the backend:
+    - Update MongoDB connection details in `server.js` (or use a cloud-based database).
+    - Set any necessary environment variables (such as API keys).
+
+5. Run the backend:
+    ```bash
+    cd ../contact-management-backend
+    node server.js
+    ```
+
+6. Run the frontend:
+    ```bash
+    cd ../contact-management-frontend
+    npm start
+    ```
+
+7. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+
+## Usage
+
+Once the application is running, you can:
+- **Add a New Contact**: Fill out the contact form with details like name, email, phone, company, and job title.
+- **View Contacts**: All contacts will be displayed in a table. You can sort and paginate the list for better navigation.
+- **Edit Contact**: Click the edit button next to a contact to update their details.
+- **Delete Contact**: Click the delete button next to a contact and confirm the action to remove them.
+
+## Screenshots
+
+Here are some screenshots to visualize the Contact Management System:
+![image](https://github.com/user-attachments/assets/81ff806b-71fe-4d7e-9f7b-b0ebed12d3bb)
+![image](https://github.com/user-attachments/assets/d739c8cd-592b-4123-a22a-556e1fba46a2)
+![image](https://github.com/user-attachments/assets/5a87d1ea-d78f-4b39-97a0-84bd895460c8)
+![image](https://github.com/user-attachments/assets/bc868f91-5178-4258-aa9b-78b5c54bf31f)
+![image](https://github.com/user-attachments/assets/d3af694b-8307-4d4a-99e8-630512250c77)
+![image](https://github.com/user-attachments/assets/74683395-1987-4b74-8deb-b17240cb780d)
+
+
+### Homepage
+![Homepage](./images/homepage.png)
+
+### Contact Table View
+![Contact Table](./images/contact-table.png)
+
+### Add Contact Form
+![Add Contact](./images/add-contact-form.png)
+
+> **Note**: Replace the paths above with actual image paths stored in your repository.
+
+## Database Schema
+
+The database schema used for storing contact information is as follows:
+
+```json
+{
+  "_id": "ObjectId",
+  "firstName": "String",
+  "lastName": "String",
+  "email": "String",
+  "phone": "String",
+  "company": "String",
+  "jobTitle": "String",
+  "createdAt": "Date",
+  "updatedAt": "Date"
+}
+```
+## MongoDB Structure
+
+The database schema used for storing contact information is as follows:
+
+```json
+{
+  "_id": "ObjectId",
+  "firstName": "String",
+  "lastName": "String",
+  "email": "String",
+  "phone": "String",
+  "company": "String",
+  "jobTitle": "String",
+  "createdAt": "Date",
+  "updatedAt": "Date"
+}
+```
+## MongoDB Structure
+
+The database schema used for storing contact information is as follows:
+
+- **Collection Name**: `contacts`
+- **Fields**:
+  - `_id`: Unique identifier for each contact (automatically generated by MongoDB).
+  - `firstName`: The first name of the contact.
+  - `lastName`: The last name of the contact.
+  - `email`: Email address of the contact.
+  - `phone`: Phone number of the contact.
+  - `company`: Company name associated with the contact.
+  - `jobTitle`: Job title of the contact.
+  - `createdAt`: Date the contact was created (automatically set).
+  - `updatedAt`: Date the contact was last updated (automatically set).
+
+## API Endpoints
+
+### POST `/contacts`
+- **Description**: Adds a new contact.
+- **Request Body**:
+  ```json
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "phone": "123-456-7890",
+    "company": "ABC Corp",
+    "jobTitle": "Software Engineer"
+  }
+  ```
+### GET `/contacts`
+- **Description**: Retrieves all contacts.
+- **Response**:
+  ```json
+  [
+    {
+      "_id": "ObjectId",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "phone": "123-456-7890",
+      "company": "ABC Corp",
+      "jobTitle": "Software Engineer"
+    },
+    ...
+  ]
+   ```
+### PUT `/contacts/:id`
+- **Description**: Updates a contact's information by ID.
+- **Request Body**: Similar to the `POST /contacts` request body.
+- **Response**: Updated contact information.
+
+### DELETE `/contacts/:id`
+- **Description**: Deletes a contact by ID.
+
+---

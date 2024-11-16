@@ -11,7 +11,6 @@ mongoose.connect('mongodb://localhost:27017/contactDB', { useNewUrlParser: true,
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
-// Contact Schema
 const contactSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
@@ -23,7 +22,6 @@ const contactSchema = new mongoose.Schema({
 
 const Contact = mongoose.model('Contact', contactSchema);
 
-// CRUD Endpoints
 app.post('/contacts', async (req, res) => {
   try {
     const contact = new Contact(req.body);

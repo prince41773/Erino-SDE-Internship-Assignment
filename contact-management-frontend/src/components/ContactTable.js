@@ -105,7 +105,6 @@ const ContactTable = ({ refreshFlag, setRefreshFlag }) => {
         onRowsPerPageChange={(e) => setRowsPerPage(+e.target.value)}
       />
 
-      {/* Edit Modal */}
       {editData && (
         <Dialog open={Boolean(editData)} onClose={() => setEditData(null)}>
           <DialogTitle>Edit Contact</DialogTitle>
@@ -126,7 +125,6 @@ const ContactTable = ({ refreshFlag, setRefreshFlag }) => {
         </Dialog>
       )}
 
-      {/* Delete Confirmation Dialog */}
       {deleteId && (
         <Dialog open={Boolean(deleteId)} onClose={() => setDeleteId(null)}>
           <DialogTitle>Confirm Delete</DialogTitle>
@@ -140,7 +138,6 @@ const ContactTable = ({ refreshFlag, setRefreshFlag }) => {
         </Dialog>
       )}
 
-      {/* Snackbar for Notifications */}
       <Snackbar
         open={snackbar.open}
         autoHideDuration={4000}

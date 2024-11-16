@@ -94,24 +94,20 @@ Once the application is running, you can:
 ## Screenshots
 
 Here are some screenshots to visualize the Contact Management System:
+
+### Homepage
 ![image](https://github.com/user-attachments/assets/81ff806b-71fe-4d7e-9f7b-b0ebed12d3bb)
+
+### Contact Table View
 ![image](https://github.com/user-attachments/assets/d739c8cd-592b-4123-a22a-556e1fba46a2)
+
+### Edit Contact Form
 ![image](https://github.com/user-attachments/assets/5a87d1ea-d78f-4b39-97a0-84bd895460c8)
+
+### Other operations images
 ![image](https://github.com/user-attachments/assets/bc868f91-5178-4258-aa9b-78b5c54bf31f)
 ![image](https://github.com/user-attachments/assets/d3af694b-8307-4d4a-99e8-630512250c77)
 ![image](https://github.com/user-attachments/assets/74683395-1987-4b74-8deb-b17240cb780d)
-
-
-### Homepage
-![Homepage](./images/homepage.png)
-
-### Contact Table View
-![Contact Table](./images/contact-table.png)
-
-### Add Contact Form
-![Add Contact](./images/add-contact-form.png)
-
-> **Note**: Replace the paths above with actual image paths stored in your repository.
 
 ## Database Schema
 

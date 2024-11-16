@@ -104,6 +104,9 @@ Here are some screenshots to visualize the Contact Management System:
 ### Edit Contact Form
 ![image](https://github.com/user-attachments/assets/5a87d1ea-d78f-4b39-97a0-84bd895460c8)
 
+### Database View
+![image](https://github.com/user-attachments/assets/544f50d2-de0d-4eb8-9f46-9dc8e2b684b0)
+
 ### Other operations images
 ![image](https://github.com/user-attachments/assets/bc868f91-5178-4258-aa9b-78b5c54bf31f)
 ![image](https://github.com/user-attachments/assets/d3af694b-8307-4d4a-99e8-630512250c77)

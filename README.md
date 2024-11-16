@@ -11,8 +11,6 @@ A full-stack web application built to manage contacts for businesses or individu
 6. [Screenshots](#screenshots)
 7. [Database Schema](#database-schema)
 8. [API Endpoints](#api-endpoints)
-9. [Contributing](#contributing)
-10. [License](#license)
 
 ## Overview
 
